@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/(full-website)/guess-who-selector-1/+page.svelte";

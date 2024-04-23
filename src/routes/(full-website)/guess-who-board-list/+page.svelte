@@ -1,0 +1,145 @@
+<script lang="ts">
+    import {base} from "$app/paths";
+    import Modal from "$lib/modal.svelte";
+    let showInstructions: boolean = false;
+	let showBoard1: boolean = false;
+</script>
+
+<body class="slay">
+	<table align="center" width="900px" cellpadding="60px">
+		<tr>
+			<td class="yuh">
+				<p><span style="font-size: 24px"><b>Guess Who Boards</b></span></p>
+				<p>
+					The following boards are available for play along with their respective card selectors:
+				</p>
+				<ul>
+					<li>
+						<a on:click={() => (showBoard1 = true)}>Board 1</a> and its
+						<a href="{base}/guess-who-selector-1">card selector</a>
+					</li>
+					<li>Board 2</li>
+				</ul>
+				<p>
+					<span style="font-size: 18px"><b>Lost?</b></span><br />
+					Click <a on:click={() => (showInstructions = true)}>here</a> to read how the game is played
+					and what files you need to download prior to play.
+				</p>
+			</td>
+		</tr>
+	</table>
+
+	<!-- Modals -->
+
+	<Modal bind:showModal={showInstructions}>
+		<p><center><b><span style="font-size: 24px">Guess Who Instructions</span></b></center></p>
+		<p>
+			<b><span style="font-size: 18px"></span>How do I play?</b><br />
+			The rules and gameplay are the same as the classic Guess Who game, with a slight adjustment for
+			the digital nature of the boards and cards:<br />
+		</p>
+		<ol type="1">
+			<li>
+				Each player downloads a board and opens it in the PDF editing software of their choice.
+				There are multiple boards available, so make sure you and the other player(s) have selected
+				the same board(s).
+			</li>
+			<li>
+				Each player then navigates to the card selector associated with the selected board(s). Each
+				selector can be found on
+				<a href="{base}/guess-who-selector-list">this list</a>. Like in classic Guess Who, each
+				player must "pick" a card as their face card. To do so, click the "Select Your Card" button.
+				Your face card will be displayed below the button. The other player(s) will do the same.
+				<b><span style="color: #FF628B">Players may have the same card!</span></b>
+			</li>
+			<li>
+				Decide which player goes first. This play asks a Yes/No question (e.g., "Was this person in
+				Theater?"). The other player answers the question and the asking player eliminates suspects
+				from their board based on the answer. Players continue to take turns asking questions.
+			</li>
+			<li>
+				Once you would like to guess another player's face card, you can ask, "Is your person
+				[Name]" instead of your Yes/No question. If you are correct, you win against that player. If
+				you are incorrect, you lose. A guess counts as your turn and cannot be asked immediately
+				after a Yes/No question.
+			</li>
+		</ol>
+		<p>
+			<b><span style="font-size: 18px"></span>What files do I need?</b><br />
+			As mentioned above, you need to download the board decided on by you and the other player(s). A
+			list of which can be found <a href="{base}/guess-who-board-list">here</a>. Once you have
+			downloaded the file, open it in the PDF editor of your choice. You do not need to download any
+			files for the face cards. To select your card, you can navigate to the appropriate selector
+			from <a href="{base}/guess-who-selector-list">this list</a>.
+		</p>
+	</Modal>
+	<Modal bind:showModal={showBoard1}>
+		<p><center><b><span style="font-size: 24px">Board 1</span></b></center></p>
+		<center><p><a href=""><button class="button button1"><b>Download</b></button></a></p></center>
+		<p><b><span style="font-size: 18px"></span>Who's included?</b></p>
+		<ul>
+			<li><span style="color: #C0C0C0">Person 1</span></li>
+			<li><span style="color: #C0C0C0">Person 2</span></li>
+		</ul>
+		<center
+			><p><a href=""><button class="button button1"><b>Card Selector</b></button></a></p></center
+		>
+	</Modal>
+</body>
+
+<style>
+    .slay {
+        background-color: #000000;
+    }
+    .yuh {
+        background-color: #161616;
+    }
+    /* hr {
+        width: 45px;
+    } */
+    a:link {
+        color: #F4BC53;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #F4BC53;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #33A7BA;
+        background-color: transparent;
+        text-decoration: bold;
+    }
+    a:active {
+        color: #F4BC53;
+        background-color: transparent;
+        text-decoration: bold;
+    }
+    b {
+        font-family: Avenir Next;
+    }
+    /* .button {
+        border: none;
+        color: #FFFFFF;
+        padding: 12px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: Avenir Next;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    } */
+    /* .button1 {
+        background-color: #F4BC53;
+    } */
+    /* .button1:hover {
+        background-color: #33A7BA;
+    } */
+    /* .button2 {
+        background-color: #FF628B;
+    } */
+</style>
