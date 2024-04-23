@@ -20,5 +20,8 @@
 	],
 	"/(full-website)/loteria": [
 		"src/routes/+layout.js"
+	],
+	"/(full-website)/most-recent": [
+		"src/routes/+layout.js"
 	]
 }
