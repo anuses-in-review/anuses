@@ -9,13 +9,15 @@ output: html_document
 # install.packages("here", repos = "http://cran.us.r-project.org")
 library(here)
 
-here::i_am("Main_Code.Rmd")
+here::i_am("./coding-files/Main_Code.Rmd")
 
-setup <- here("Main_Code Chunks", "setup")
+# /Users/eliserodriguez/Desktop/Projects/anuses/coding-files/Main_Code.Rmd
+
+setup <- here("coding-files", "main-code-chunks", "setup")
 source(here(setup, "setup.R")) # Packages
 source(here(setup, "functions.R")) # Functions
 
-Datanuses <- here("Excel", "Datanuses.xlsx")
+Datanuses <- here("coding-files", "Excel", "Datanuses.xlsx")
 data_anuses <- read.xlsx(Datanuses, sheet = 1)
 data_actv <- read.xlsx(Datanuses, sheet = 2)
 
@@ -27,13 +29,13 @@ rm(Datanuses)
 ```
 
 ```{r actv, include = TRUE, echo = FALSE}
-source(here("Main_Code Chunks", "actv", "actv.R"))
+source(here("coding-files", "main-code-chunks", "actv", "actv.R"))
 ```
 
 ### Vocalists (`vocs`)
 
 ```{r vocs, include = TRUE, echo = FALSE}
-vocs <- here("Main_Code Chunks", "vocs")
+vocs <- here("coding-files", "main-code-chunks", "vocs")
 
 source(here(vocs, "vocs_quan.R")) # Vocalist Name and Appearances
 print("vocs_quan: Name | Appearances | Skin1 | Skin2 | Skin3 | Skin4 | Skin5 | GendM | GendW | GendO")
@@ -44,7 +46,7 @@ print("table_vocs_quan: Rank | Artist | Appearances (Top 10)")
 ### Artists (`arts`)
 
 ```{r arts, include = TRUE, echo = FALSE}
-arts <- here("Main_Code Chunks", "arts")
+arts <- here("coding-files", "main-code-chunks", "arts")
 
 source(here(arts, "arts_quan.R")) # Artist Name and Appearances
 print("arts_quan: Name | Appearances")
@@ -55,7 +57,7 @@ print("table_arts_quan: Rank | Artist | Appearances (Top 10)")
 ### Streaks (`strk`)
 
 ```{r strk, include = TRUE, echo = FALSE}
-strk <- here("Main_Code Chunks", "arts")
+strk <- here("coding-files", "main-code-chunks", "arts")
 
 
 
@@ -64,7 +66,7 @@ strk <- here("Main_Code Chunks", "arts")
 ### Languages (`lang`)
 
 ```{r lang, include = TRUE, echo = FALSE}
-lang <- here("Main_Code Chunks", "lang")
+lang <- here("coding-files", "main-code-chunks", "lang")
 
 source(here(lang, "lang_quan.R")) # Language and Appearances
 print("lang_quan: Language | Appearances")
@@ -75,7 +77,7 @@ print("table_lang_quan: Rank | Languages | Appearances")
 ### Genres (`genr`)
 
 ```{r genr, include = TRUE, echo = FALSE}
-genr <- here("Main_Code Chunks", "genr")
+genr <- here("coding-files", "main-code-chunks", "genr")
 
 source(here(genr, "genr_quan.R")) # Genre and Appearances
 source(here(genr, "table_genr.R")) # Tables
@@ -84,7 +86,7 @@ source(here(genr, "table_genr.R")) # Tables
 ### Albums (`albm`)
 
 ```{r albm, include = TRUE, echo = FALSE}
-albm <- here("Main_Code Chunks", "albm")
+albm <- here("coding-files", "main-code-chunks", "albm")
 
 source(here(albm, "albm_quan.R")) # Album Name and Appearances
 print("albm_quan: Album | Artist | Appearances")
@@ -101,7 +103,7 @@ print("table_album_quan_uniq: Rank | Album | Artist | Inclusion (Top 10)")
 ### Songs (`song`)
 
 ```{r song, include = TRUE, echo = FALSE}
-song <- here("Main_Code Chunks", "song")
+song <- here("coding-files", "main-code-chunks", "song")
 
 source(here(song, "song_quan.R")) # Song Name and Appearances
 print("song_quan: Song | Artist | Appearances")
@@ -112,7 +114,7 @@ print("table_song_quan: Rank | Song | Artist | Appearances (Top 5)")
 ### Gender (`gend`)
 
 ```{r gend, include = TRUE, echo = FALSE}
-gend <- here("Main_Code Chunks", "gend")
+gend <- here("coding-files", "main-code-chunks", "gend")
 
 source(here(gend, "gend_quan.R")) # Gend quanities for anus and year
 print("gend_quan: Anus | Men | Women | Other")
@@ -131,7 +133,7 @@ source(here(gend, "plot_gend.R")) # Plots
 <span style="color: #d30000; font-size: 30px">haven't looked yet</span>
 
 ```{r skin, include = TRUE, echo = FALSE}
-skin <- here("Main_Code Chunks", "skin")
+skin <- here("coding-files", "main-code-chunks", "skin")
 
 source(here(skin, "skin_quan.R")) # Skin quanities for anus and year
 print("skin_quan: Anus | Skin1 | Skin2 | Skin3 | Skin4 | Skin5")
@@ -146,7 +148,7 @@ source(here(skin, "plot_skin.R")) # Plots
 <span style="color: #d30000; font-size: 30px">haven't looked yet</span>
 
 ```{r play, include = TRUE, echo = FALSE}
-play <- here("Main_Code Chunks", "play")
+play <- here("coding-files", "main-code-chunks", "play")
 
 source(here(play, "data_play.R")) # Datanuses with PlaysN
 source(here(play, "play_quan.R")) # Play quantities for song, anus, and year
@@ -160,7 +162,7 @@ source(here(play, "plot_play.R")) # Plots
 <span style="color: #d30000; font-size: 30px">haven't looked yet</span>
 
 ```{r anus, include = TRUE, echo = FALSE}
-anus <- here("Main_Code Chunks", "anus")
+anus <- here("coding-files", "main-code-chunks", "anus")
 
 source(here(anus, "anus_data.R")) # Generates each Anus as its own data.frame
 source(here(anus, "table_anus.R")) # Tables
@@ -189,7 +191,7 @@ for (i in seq_along(table_names)) {
   # Check if the object is a data frame
   if (is.data.frame(obj)) {
     xlsx_file <- paste0(name, ".xlsx")
-    table_route <- here("Tables", xlsx_file)
+    table_route <- here("coding-files", "Tables", xlsx_file)
     write.xlsx(obj, table_route, sheetName = "Sheet 1", rowNames = FALSE) # Export
 
     # Convert the table to HTML using knitr::kable()
@@ -222,7 +224,7 @@ rm(table_route)
 plot_names <- ls()
 plot_names <- plot_names[grepl("^plot_", plot_names)]
 plot_html <- character(length(plot_names))
-plot_route <- here("Plots")
+plot_route <- here("coding-files", "Plots")
 
 # Loop through each plot
 for (i in seq_along(plot_names)) {

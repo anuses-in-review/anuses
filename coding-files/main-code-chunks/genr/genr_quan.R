@@ -17,8 +17,8 @@ genr_quan[, 2] <- as.numeric(table(genr_demo[, 1])) # Number of appearances
 genr_quan <- as.data.frame(genr_quan)
 
 # Import existing list
-temp_route <- here("Excel", "Genre_Binary_Backup.xlsx") # Just in case it fucks up
-output_route <- here("Excel", "Genre_Binary.xlsx")
+temp_route <- here("coding-files", "Excel", "Genre_Binary_Backup.xlsx") # Just in case it fucks up
+output_route <- here("coding-files", "Excel", "Genre_Binary.xlsx")
 data_genr <- read.xlsx(output_route, sheet = 1)
 
 # Add existing data to new list and counts

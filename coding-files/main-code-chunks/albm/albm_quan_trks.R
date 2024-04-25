@@ -10,8 +10,8 @@ for (i in nrow(albm_quan_trks):1) {
 # View(albm_quan_trks)
 
 # Import existing list
-# temp_route <- here("Excel", "CollectYourCoin_Backup.xlsx") # Just in case it fucks up
-output_route <- here("Excel", "CollectYourCoin.xlsx")
+# temp_route <- here("coding-files", "Excel", "CollectYourCoin_Backup.xlsx") # Just in case it fucks up
+output_route <- here("coding-files", "Excel", "CollectYourCoin.xlsx")
 data_albm <- read.xlsx(output_route, sheet = 1)
 
 # Add existing data to new list and counts

@@ -21,8 +21,8 @@ vocs_quan <- as.data.frame(vocs_quan)
 colnames(vocs_quan) <- c("Name", "Appearances", "Skin1", "Skin2", "Skin3", "Skin4", "Skin5", "GendM", "GendW", "GendO")
 
 # Import existing list
-temp_route <- here("Excel", "Art_List_Backup.xlsx") # Just in case it fucks up
-output_route <- here("Excel", "Art_List.xlsx")
+temp_route <- here("coding-files", "Excel", "Art_List_Backup.xlsx") # Just in case it fucks up
+output_route <- here("coding-files", "Excel", "Art_List.xlsx")
 data_vocs <- read.xlsx(output_route, sheet = 1)
 
 # Add existing data to new list and counts
