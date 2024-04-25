@@ -10,10 +10,9 @@ output: html_document
 library(here)
 
 here::i_am("./coding-files/Main_Code.Rmd")
+r_folder <- here("coding-files", "main-code-chunks")
 
-# /Users/eliserodriguez/Desktop/Projects/anuses/coding-files/Main_Code.Rmd
-
-setup <- here("coding-files", "main-code-chunks", "setup")
+setup <- here(r_folder, "setup")
 source(here(setup, "setup.R")) # Packages
 source(here(setup, "functions.R")) # Functions
 
@@ -29,13 +28,13 @@ rm(Datanuses)
 ```
 
 ```{r actv, include = TRUE, echo = FALSE}
-source(here("coding-files", "main-code-chunks", "actv", "actv.R"))
+source(here(r_folder, "actv", "actv.R"))
 ```
 
 ### Vocalists (`vocs`)
 
 ```{r vocs, include = TRUE, echo = FALSE}
-vocs <- here("coding-files", "main-code-chunks", "vocs")
+vocs <- here(r_folder, "vocs")
 
 source(here(vocs, "vocs_quan.R")) # Vocalist Name and Appearances
 print("vocs_quan: Name | Appearances | Skin1 | Skin2 | Skin3 | Skin4 | Skin5 | GendM | GendW | GendO")
@@ -46,7 +45,7 @@ print("table_vocs_quan: Rank | Artist | Appearances (Top 10)")
 ### Artists (`arts`)
 
 ```{r arts, include = TRUE, echo = FALSE}
-arts <- here("coding-files", "main-code-chunks", "arts")
+arts <- here(r_folder, "arts")
 
 source(here(arts, "arts_quan.R")) # Artist Name and Appearances
 print("arts_quan: Name | Appearances")
@@ -57,7 +56,7 @@ print("table_arts_quan: Rank | Artist | Appearances (Top 10)")
 ### Streaks (`strk`)
 
 ```{r strk, include = TRUE, echo = FALSE}
-strk <- here("coding-files", "main-code-chunks", "arts")
+strk <- here(r_folder, "arts")
 
 
 
@@ -66,7 +65,7 @@ strk <- here("coding-files", "main-code-chunks", "arts")
 ### Languages (`lang`)
 
 ```{r lang, include = TRUE, echo = FALSE}
-lang <- here("coding-files", "main-code-chunks", "lang")
+lang <- here(r_folder, "lang")
 
 source(here(lang, "lang_quan.R")) # Language and Appearances
 print("lang_quan: Language | Appearances")
@@ -77,7 +76,7 @@ print("table_lang_quan: Rank | Languages | Appearances")
 ### Genres (`genr`)
 
 ```{r genr, include = TRUE, echo = FALSE}
-genr <- here("coding-files", "main-code-chunks", "genr")
+genr <- here(r_folder, "genr")
 
 source(here(genr, "genr_quan.R")) # Genre and Appearances
 source(here(genr, "table_genr.R")) # Tables
@@ -86,7 +85,7 @@ source(here(genr, "table_genr.R")) # Tables
 ### Albums (`albm`)
 
 ```{r albm, include = TRUE, echo = FALSE}
-albm <- here("coding-files", "main-code-chunks", "albm")
+albm <- here(r_folder, "albm")
 
 source(here(albm, "albm_quan.R")) # Album Name and Appearances
 print("albm_quan: Album | Artist | Appearances")
@@ -103,7 +102,7 @@ print("table_album_quan_uniq: Rank | Album | Artist | Inclusion (Top 10)")
 ### Songs (`song`)
 
 ```{r song, include = TRUE, echo = FALSE}
-song <- here("coding-files", "main-code-chunks", "song")
+song <- here(r_folder, "song")
 
 source(here(song, "song_quan.R")) # Song Name and Appearances
 print("song_quan: Song | Artist | Appearances")
@@ -114,7 +113,7 @@ print("table_song_quan: Rank | Song | Artist | Appearances (Top 5)")
 ### Gender (`gend`)
 
 ```{r gend, include = TRUE, echo = FALSE}
-gend <- here("coding-files", "main-code-chunks", "gend")
+gend <- here(r_folder, "gend")
 
 source(here(gend, "gend_quan.R")) # Gend quanities for anus and year
 print("gend_quan: Anus | Men | Women | Other")
@@ -133,7 +132,7 @@ source(here(gend, "plot_gend.R")) # Plots
 <span style="color: #d30000; font-size: 30px">haven't looked yet</span>
 
 ```{r skin, include = TRUE, echo = FALSE}
-skin <- here("coding-files", "main-code-chunks", "skin")
+skin <- here(r_folder, "skin")
 
 source(here(skin, "skin_quan.R")) # Skin quanities for anus and year
 print("skin_quan: Anus | Skin1 | Skin2 | Skin3 | Skin4 | Skin5")
@@ -148,7 +147,7 @@ source(here(skin, "plot_skin.R")) # Plots
 <span style="color: #d30000; font-size: 30px">haven't looked yet</span>
 
 ```{r play, include = TRUE, echo = FALSE}
-play <- here("coding-files", "main-code-chunks", "play")
+play <- here(r_folder, "play")
 
 source(here(play, "data_play.R")) # Datanuses with PlaysN
 source(here(play, "play_quan.R")) # Play quantities for song, anus, and year
@@ -162,7 +161,7 @@ source(here(play, "plot_play.R")) # Plots
 <span style="color: #d30000; font-size: 30px">haven't looked yet</span>
 
 ```{r anus, include = TRUE, echo = FALSE}
-anus <- here("coding-files", "main-code-chunks", "anus")
+anus <- here(r_folder, "anus")
 
 source(here(anus, "anus_data.R")) # Generates each Anus as its own data.frame
 source(here(anus, "table_anus.R")) # Tables
