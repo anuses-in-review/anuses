@@ -11,14 +11,14 @@
 		<tr>
 		<td class = "yuh">
 		
-		<h1><center>Anuses in Review</center></h1>
+		<h1><center>Juegos de Chisme</center></h1>
 		
 		<!-- Navigation -->
 		
 		<p><center>
 			<a href="{base}/"><button class = "button button1"><b>Home</b></button></a>
-			<a href="{base}/most-recent"><button class="button button1"><b>Most Recent</b></button></a>
-			<a href="{base}/loteria"><button class="button button1"><b>Previous</b></button></a>
+			<a href="{base}/guess-who"><button class="button button1"><b>Guess Who</b></button></a>
+			<a href="{base}/loteria"><button class="button button1"><b>Lotería</b></button></a>
 		</center></p>
 		
 		</td>
