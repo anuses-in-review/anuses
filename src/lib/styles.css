@@ -7,13 +7,13 @@ html, main {
 /* background color for whole page */
 
 .slay {
-    background-color: #510879;
+    background-color: #570879;
 }
 
 /* background color for slot and top navigation */
 
 .yuh {
-    background-color: #7628a0;
+    background-color: #77189f;
 }
 
 hr {
@@ -24,25 +24,25 @@ hr {
 
 a {
     cursor: pointer;
-    color: #ff9f2a;
+    color: #fd9a20;
 }
 a:link {
-    color: #ff9f2a;
+    color: #fd9a20;
     background-color: transparent;
     text-decoration: none;
 }
 a:visited {
-    color: #ff9f2a;
+    color: #fd9a20;
     background-color: transparent;
     text-decoration: none;
 }
 a:hover {
-    color: #6bcf50;
+    color: #5bce3c;
     background-color: transparent;
     text-decoration: bold;
 }
 a:active {
-    color: #F4BC53;
+    color: #fd9a20;
     background-color: transparent;
     text-decoration: bold;
 }
@@ -67,8 +67,8 @@ b {
     cursor: pointer;
 }
 .button1 {
-    background-color: #F4BC53;
+    background-color: #fd9a20;
 }
 .button1:hover {
-    background-color: #6bcf50;
+    background-color: #5bce3c;
 }
