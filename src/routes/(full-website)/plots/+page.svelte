@@ -9,7 +9,7 @@
 		<tr>
 			<td class="yuh">
 				<p><span style="font-size: 24px"><b>Plots, baby!!!</b></span></p>
-				<img src="{base}/exports-from-r/plot_gend_perc_year.png" alt="Flowers in Chania">
+				<!-- <img src="{base}/exports-from-r/plot_gend_perc_year.png" alt="Flowers in Chania"> -->
 			</td>
 		</tr>
 	</table>
