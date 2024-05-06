@@ -3,31 +3,41 @@ html, main {
     line-height: 1.25;
     font-family: Avenir Next;
 }
+
+/* background color for whole page */
+
 .slay {
-    background-color: #000000;
+    background-color: #510879;
 }
+
+/* background color for slot and top navigation */
+
 .yuh {
-    background-color: #161616;
+    background-color: #7628a0;
 }
+
 hr {
     width: 45px;
 }
+
+/* links */
+
 a {
     cursor: pointer;
-    color: #F4BC53;
+    color: #ff9f2a;
 }
 a:link {
-    color: #F4BC53;
+    color: #ff9f2a;
     background-color: transparent;
     text-decoration: none;
 }
 a:visited {
-    color: #F4BC53;
+    color: #ff9f2a;
     background-color: transparent;
     text-decoration: none;
 }
 a:hover {
-    color: #33A7BA;
+    color: #6bcf50;
     background-color: transparent;
     text-decoration: bold;
 }
@@ -36,9 +46,13 @@ a:active {
     background-color: transparent;
     text-decoration: bold;
 }
+
 b {
     font-family: Avenir Next;
 }
+
+/* navigation buttons */
+
 .button {
     border: none;
     color: #FFFFFF;
@@ -56,8 +70,5 @@ b {
     background-color: #F4BC53;
 }
 .button1:hover {
-    background-color: #33A7BA;
-}
-.button2 {
-    background-color: #FF628B;
+    background-color: #6bcf50;
 }

@@ -10,7 +10,7 @@
 <td class = "yuh">
     <p>
         <center>
-            <b><span style="color: #FF628B">Welcome!</span></b> Use the navigation above to find the game files you're looking for.
+            <b><span style="color: #FF628B">Welcome!</span></b> <a href="{base}/most-recent">This</a> is what a link looks like.
         </center>
     </p>
 </td>

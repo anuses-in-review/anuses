@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/(full-website)/guess-who/+page.svelte";
+export { default as component } from "../../../../src/routes/(full-website)/most-recent/+page.svelte";
