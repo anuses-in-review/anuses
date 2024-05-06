@@ -1,4 +1,3 @@
-<!-- Announcements -->
 <script lang = 'ts'>
 	import "$lib/styles.css"
 	import { base } from "$app/paths";
@@ -10,10 +9,11 @@
 <td class = "yuh">
     <p>
         <center>
-            <b><span style="color: #FF628B">Welcome!</span></b> <a href="{base}/most-recent">This</a> is what a link looks like.
+            <b><span style="color: #FF628B">Welcome!</span></b> <a href="{base}/most-recent">This</a> is what a link looks like and this is what an image looks like: 
         </center>
     </p>
-    <!-- <p>and this is what an image looks like: <img src="$exports-from-r/plot_gend_perc_year.png"></p> -->
+    <img src="src/exports-from-r/plot_gend_perc_year.png" alt="Plot of Gender Percentage" width="700px">
+
     
 </td>
 </tr>
