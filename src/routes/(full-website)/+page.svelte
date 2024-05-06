@@ -13,6 +13,8 @@
             <b><span style="color: #FF628B">Welcome!</span></b> <a href="{base}/most-recent">This</a> is what a link looks like.
         </center>
     </p>
+    <!-- <p>and this is what an image looks like: <img src="$exports-from-r/plot_gend_perc_year.png"></p> -->
+    
 </td>
 </tr>
 </table>
