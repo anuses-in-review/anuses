@@ -2,29 +2,28 @@
     import {base} from "$app/paths";
     import Modal from "$lib/modal.svelte";
     let showInstructions: boolean = false;
+	let showBoard1: boolean = false;
 </script>
 
 <body class="slay">
 	<table align="center" width="900px" cellpadding="60px">
 		<tr>
 			<td class="yuh">
-				<p><span style="font-size: 24px"><b>Guess Who</b></span></p>
+				<p><span style="font-size: 24px"><b>Guess Who Boards</b></span></p>
 				<p>
-					<span style="font-size: 18px"><b>First time playing?</b></span><br />
+					The following boards are available for play along with their respective card selectors:
+				</p>
+				<ul>
+					<li>
+						<a on:click={() => (showBoard1 = true)}>Board 1</a> and its
+						<a href="{base}/guess-who-selector-1">card selector</a>
+					</li>
+					<li>Board 2</li>
+				</ul>
+				<p>
+					<span style="font-size: 18px"><b>Lost?</b></span><br />
 					Click <a on:click={() => (showInstructions = true)}>here</a> to read how the game is played
 					and what files you need to download prior to play.
-				</p>
-				<p>
-					<span style="font-size: 18px"><b>Already know how to play?</b></span><br />
-					Use the links below to navigate to the files required to play:
-				</p>
-				<p>
-					<a href="{base}/guess-who-board-list"
-						><button class="button button1"><b>Boards</b></button></a
-					>
-					<a href="{base}/guess-who-selector-list"
-						><button class="button button1"><b>Cards</b></button></a
-					>
 				</p>
 			</td>
 		</tr>
@@ -74,4 +73,73 @@
 			from <a href="{base}/guess-who-selector-list">this list</a>.
 		</p>
 	</Modal>
+	<Modal bind:showModal={showBoard1}>
+		<p><center><b><span style="font-size: 24px">Board 1</span></b></center></p>
+		<center><p><a href=""><button class="button button1"><b>Download</b></button></a></p></center>
+		<p><b><span style="font-size: 18px"></span>Who's included?</b></p>
+		<ul>
+			<li><span style="color: #C0C0C0">Person 1</span></li>
+			<li><span style="color: #C0C0C0">Person 2</span></li>
+		</ul>
+		<center
+			><p><a href=""><button class="button button1"><b>Card Selector</b></button></a></p></center
+		>
+	</Modal>
 </body>
+
+<style>
+    .slay {
+        background-color: #000000;
+    }
+    .yuh {
+        background-color: #161616;
+    }
+    /* hr {
+        width: 45px;
+    } */
+    a:link {
+        color: #F4BC53;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #F4BC53;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #33A7BA;
+        background-color: transparent;
+        text-decoration: bold;
+    }
+    a:active {
+        color: #F4BC53;
+        background-color: transparent;
+        text-decoration: bold;
+    }
+    b {
+        font-family: Avenir Next;
+    }
+    /* .button {
+        border: none;
+        color: #FFFFFF;
+        padding: 12px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: Avenir Next;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    } */
+    /* .button1 {
+        background-color: #F4BC53;
+    } */
+    /* .button1:hover {
+        background-color: #33A7BA;
+    } */
+    /* .button2 {
+        background-color: #FF628B;
+    } */
+</style>

@@ -6,13 +6,19 @@
 	"/": [
 		"src/routes/+layout.js"
 	],
-	"/(full-website)/all-data": [
+	"/(full-website)/guess-who-board-list": [
 		"src/routes/+layout.js"
 	],
-	"/(full-website)/most-recent": [
+	"/(full-website)/guess-who-selector-1": [
 		"src/routes/+layout.js"
 	],
-	"/(full-website)/plots": [
+	"/(full-website)/guess-who-selector-list": [
+		"src/routes/+layout.js"
+	],
+	"/(full-website)/guess-who": [
+		"src/routes/+layout.js"
+	],
+	"/(full-website)/loteria": [
 		"src/routes/+layout.js"
 	]
 }
