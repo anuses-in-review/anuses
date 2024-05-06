@@ -12,7 +12,7 @@
             <b><span style="color: #FF628B">Welcome!</span></b> <a href="{base}/most-recent">This</a> is what a link looks like and this is what an image looks like: 
         </center>
     </p>
-    <img src="./src/exports-from-r/plot_gend_perc_year.png" alt="Plot of Gender Percentage by Year" width="100px">
+    <img src="./src/lib/exports-from-r/plot_gend_perc_year.png" alt="Plot of Gender Percentage by Year" width="100px">
 
     
 </td>
