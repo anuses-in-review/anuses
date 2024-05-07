@@ -13,14 +13,14 @@ jobs:
 
       # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
       # - name: Install pnpm
-      #   uses: pnpm/action-setup@v2
+      #   uses: pnpm/action-setup@v3
       #   with:
       #     version: 8
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: "20" # Update this line to specify Node.js version 20
           cache: npm
 
       - name: Install dependencies
