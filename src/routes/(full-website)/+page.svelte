@@ -14,7 +14,6 @@
     </p>
     <img src="./src/lib/exports-from-r/plot_gend_perc_year.png" alt="Plot of Gender Percentage by Year" width="100px">
 
-    
 </td>
 </tr>
 </table>
